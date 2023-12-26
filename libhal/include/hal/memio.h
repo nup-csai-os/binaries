@@ -1,47 +1,47 @@
-#include <bitints.h>
+#include <hal/bitints.h>
 
 static inline void __raw_writeb(u8 val, volatile void *addr) {
-	asm volatile("sb %0, 0(%1)" : : "r"(val), "r"(addr));
+  asm volatile("sb %0, 0(%1)" : : "r"(val), "r"(addr));
 }
 
 static inline void __raw_writew(u16 val, volatile void *addr) {
-	asm volatile("sh %0, 0(%1)" : : "r"(val), "r"(addr));
+  asm volatile("sh %0, 0(%1)" : : "r"(val), "r"(addr));
 }
 
 static inline void __raw_writel(u32 val, volatile void *addr) {
-	asm volatile("sw %0, 0(%1)" : : "r"(val), "r"(addr));
+  asm volatile("sw %0, 0(%1)" : : "r"(val), "r"(addr));
 }
 
 static inline void __raw_writeq(u64 val, volatile void *addr) {
-	asm volatile("sd %0, 0(%1)" : : "r"(val), "r"(addr));
+  asm volatile("sd %0, 0(%1)" : : "r"(val), "r"(addr));
 }
 
 static inline u8 __raw_readb(const volatile void *addr) {
-	u8 val;
+  u8 val;
 
-	asm volatile("lb %0, 0(%1)" : "=r"(val) : "r"(addr));
-	return val;
+  asm volatile("lb %0, 0(%1)" : "=r"(val) : "r"(addr));
+  return val;
 }
 
 static inline u16 __raw_readw(const volatile void *addr) {
-	u16 val;
+  u16 val;
 
-	asm volatile("lh %0, 0(%1)" : "=r"(val) : "r"(addr));
-	return val;
+  asm volatile("lh %0, 0(%1)" : "=r"(val) : "r"(addr));
+  return val;
 }
 
 static inline u32 __raw_readl(const volatile void *addr) {
-	u32 val;
+  u32 val;
 
-	asm volatile("lw %0, 0(%1)" : "=r"(val) : "r"(addr));
-	return val;
+  asm volatile("lw %0, 0(%1)" : "=r"(val) : "r"(addr));
+  return val;
 }
 
 static inline u64 __raw_readq(const volatile void *addr) {
-	u64 val;
+  u64 val;
 
-	asm volatile("ld %0, 0(%1)" : "=r"(val) : "r"(addr));
-	return val;
+  asm volatile("ld %0, 0(%1)" : "=r"(val) : "r"(addr));
+  return val;
 }
 
 #define __io_br()	do {} while (0)

@@ -1,4 +1,4 @@
-#include <bitints.h>
+#include <hal/bitints.h>
 #include <stddef.h>
 
 /* 
