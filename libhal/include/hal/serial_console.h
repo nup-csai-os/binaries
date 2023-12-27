@@ -23,6 +23,11 @@ void serial_putb_hex(u8 x);
 void serial_putl_hex(u64 x);
 
 /*
+ * Dump a bunch of data into serial console as hex..
+ */
+void serial_hexdump(const void* ptr, size_t sz);
+
+/*
  * An oversimplified printf used in the `printf` macro.
  *
  * You are an engineer who is writing libHAL (a bios pretty much). If you forget

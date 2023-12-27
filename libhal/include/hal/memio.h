@@ -1,4 +1,7 @@
 #include <hal/bitints.h>
+#include <stddef.h>
+
+void* memcpy(void* dst, const void* src, size_t amount);
 
 static inline void __raw_writeb(u8 val, volatile void *addr) {
   asm volatile("sb %0, 0(%1)" : : "r"(val), "r"(addr));
