@@ -1,6 +1,11 @@
 #include <hal/bitints.h>
 #include <stddef.h>
 
+/*
+ * Gets a character from the serial console.
+ */
+char serial_getc();
+
 /* 
  * Puts a character into the serial console.
  */
