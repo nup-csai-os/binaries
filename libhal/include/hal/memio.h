@@ -1,3 +1,6 @@
+#ifndef MEMIO_H
+#define MEMIO_H
+
 #include <hal/bitints.h>
 #include <stddef.h>
 
@@ -61,3 +64,5 @@ static inline u64 __raw_readq(const volatile void *addr) {
 #define writew(v,c)	({ __io_bw(); __raw_writew((v),(c)); __io_aw(); })
 #define writel(v,c)	({ __io_bw(); __raw_writel((v),(c)); __io_aw(); })
 #define writeq(v,c)	({ __io_bw(); __raw_writeq((v),(c)); __io_aw(); })
+
+#endif

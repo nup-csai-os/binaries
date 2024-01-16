@@ -1,3 +1,6 @@
+#ifndef SERIAL_CONSOLE_H
+#define SERIAL_CONSOLE_H
+
 #include <hal/bitints.h>
 #include <stddef.h>
 
@@ -46,3 +49,5 @@ void __serial_printf(const char* fmt, const u64* args, size_t cnt);
     u64 args[] = { __VA_ARGS__ }; \
     __serial_printf(fmt, args, sizeof(args) / sizeof(u64)); \
   }
+
+#endif

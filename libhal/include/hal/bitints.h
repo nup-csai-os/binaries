@@ -1,3 +1,6 @@
+#ifndef BITINTS_H
+#define BITINTS_H
+
 typedef char			s8;
 typedef unsigned char		u8;
 
@@ -9,3 +12,5 @@ typedef unsigned int		u32;
 
 typedef long			s64;
 typedef unsigned long		u64;
+
+#endif
